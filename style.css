@@ -1,0 +1,150 @@
+body{
+    background-color: rgba(0, 191, 255, 1);
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0px;
+    background-color: white;
+}
+.headeri{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    color: rgb(40, 115, 152);
+    
+}
+
+.logo{
+    width: 150px;
+    height: 50px;
+    
+}
+
+ul{
+    padding-right: 30px;
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    gap: 50px;
+    
+}
+
+.favoritestyled{
+    width: 150px;
+    height: 40px;
+    flex-shrink: 0;
+    color: white;
+    background-color: rgba(0, 191, 255, 1);
+    border: 0px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banerBG{
+   
+    display: flex;
+    height: 400px;
+    background-color: black;
+    padding: 20px;
+
+}
+.Baneri{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.fotografit{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    justify-content:center;
+    display: flex;
+    border: 10px white;
+    background-color: rgba(0, 191, 255, 1);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.rubrika{
+    
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.modeli button{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 191, 255, 1);
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 12px;
+}
+
+.img1{
+    padding: 0;
+    margin: 0;
+    
+    width: 300px;
+    height: 300px;
+    background-image: url(Rectangle\ 4.png);
+}
+.img2{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 5.png);
+}
+.img3{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 6.png);
+}
+.img4{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 4.png);
+}
+.img5{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 5.png);
+}
+.img6{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 6.png);
+}
+.img7{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 4.png);
+}
+.img8{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 5.png);
+}
