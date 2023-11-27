@@ -1,0 +1,109 @@
+.produkti{
+    display: flex;
+    padding: 40px;
+    height: 400px;
+    
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: flex-start;
+}
+
+.foto{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    height: 400px;
+    width: 500px;
+}
+
+.mySlides{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    height: 400px;
+    width: 500px;
+}
+
+.informacion{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 30px;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 175px;
+    border: 0px;
+    color: white;
+    background-color: rgba(0, 191, 255, 1);
+    border-radius: 20px;
+    height: 50px;
+    width: 50px;
+}
+
+
+
+.submit{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 191, 255, 1);
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 12px;
+}
+
+.shto{
+    color: gainsboro;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(59, 67, 70);
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 12px;
+}
+
+.infoperprodukt{
+    margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-content: flex-end;
+        background-color: white;
+        width: 1200px;
+        
+}
+
+.fotografiaperprodukt{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.titulliperprodukt{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+
+.textiperprodukt{
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}

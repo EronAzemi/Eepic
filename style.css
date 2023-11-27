@@ -27,6 +27,9 @@ header{
 }
 
 ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     padding-right: 30px;
     display: flex;
     gap: 20px;
@@ -35,6 +38,30 @@ ul{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     gap: 50px;
     
+}
+a {
+    flex: 1;
+    text-decoration: none;
+    outline-color: transparent;
+    text-align: center;
+    line-height: 3;
+    color: black;
+  }
+  
+  a:link,
+  a:visited,
+  a:focus {
+    
+    color: black;
+  }
+  
+  
+  a:active {
+    
+    color: white;
+  }
+.navtext{
+    color: black
 }
 
 .favoritestyled{
@@ -74,7 +101,19 @@ ul{
     flex-wrap: wrap;
     gap: 10px;
     width: 100%;
+    
+    
 }
+
+.box img {
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .box1 img {
+    object-fit: cover;
+  }
 
 .rubrika{
     
@@ -85,6 +124,7 @@ ul{
     flex-direction: column;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    border-radius: 12px;
     
 }
 
@@ -98,53 +138,19 @@ ul{
     border-radius: 12px;
 }
 
-.img1{
-    padding: 0;
-    margin: 0;
-    
-    width: 300px;
+
+
+.modeli{
+    padding: 10px;
+}
+
+.footer{
+    width: 100%;
     height: 300px;
-    background-image: url(Rectangle\ 4.png);
+    background-color: black;
 }
-.img2{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 5.png);
-}
-.img3{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 6.png);
-}
-.img4{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 4.png);
-}
-.img5{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 5.png);
-}
-.img6{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 6.png);
-}
-.img7{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 4.png);
-}
-.img8{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 5.png);
-}
+
+
+
+
+

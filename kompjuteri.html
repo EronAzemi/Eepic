@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eepic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kompjuteri.css">
+    
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+    <header>
+        <div class="headeri">
+            <a href="index.html"><img class="logo" src="LOGO PNG 1.png" ></a>
+            
+            <div class="catalog"> 
+                
+            </div>
+        </div>
+        <ul>
+            
+            
+            <li><a class="active" href="Regjistrohu.html"><button class="favoritestyled" type="button" onclick="" >Regjistrohu</button></a></li>
+            <li class="navtext"><a href="Aboutus.html">About Us</a></li>
+            <li class="navtext"><a href="contact.html">Contact Us</a></li>
+            
+        </ul>
+    </header>
+    <main>
+
+        <div class="produkti">
+            <div class="foto">
+                
+                <button class="button" onclick="plusDivs(-1)">&#10094;</button>
+
+                <img class="mySlides" src="build2.png" width="300px" height="300px">
+                <img class="mySlides" src="build3.png" width="300px" height="300px">
+                <img class="mySlides" src="build2.png" width="300px" height="300px">
+                
+                
+                <button class="button" onclick="plusDivs(+1)">&#10095;</button> 
+
+            </div>
+            <div class="info">
+                <div class="informacion">
+                    <p><h2><b>Eepic Build</b></h2></p>
+                    <p><h4>Intel Core i5-12400F, 16GB RAM, 1TB SSD M.2, Gigabyte RTX 4060 EAGLE OC 8GB</h4></p>
+                    <p>Prodhuesi me famë botërore i komponentëve, kompjuterave desktop dhe laptopëve, MSI, po lanson kasën e tij kompjuterike MAG FORGE 100M. Ajo ofron një dizajn me dy dhoma, panel anësor prej xhami dhe 3 ventilatorë 120 mm të instaluar paraprakisht, dy prej të cilave kanë ndriçim RGB LED. Brenda kasës gjenden ndarje: 2x 3.5 " dhe 3-5x 2.5 " për HDD / SSD.</p>
+                    <p><form action="kompjuteri.html">
+                    <button class="submit" type="submit">Buy Now</button>
+                    <button class="shto" type="submit">Add to card</button></p>
+                </div>
+                
+                
+            </div>
+        </div>
+
+       <br>
+      
+              
+      
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+    }
+    </script>
+
+</body>
+</html>
