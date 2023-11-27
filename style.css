@@ -149,8 +149,27 @@ a {
     height: 300px;
     background-color: black;
 }
-
-
-
-
-
+.img5{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 5.png);
+}
+.img6{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 6.png);
+}
+.img7{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 4.png);
+}
+.img8{
+    border: 10px white;
+    width: 298px;
+    height: 298px;
+    background-image: url(Rectangle\ 5.png);
+}
