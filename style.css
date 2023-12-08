@@ -76,9 +76,10 @@ a {
 }
 
 .banerBG{
-   
+    width: 100%;
+    height: auto;
     display: flex;
-    height: 400px;
+    
     background-color: black;
     padding: 20px;
 
