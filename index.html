@@ -5,28 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eepic</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 <body>
 
  <!-- ketu vendoset header    -->
 <header>
-    <div class="headeri">
-        <a href="index.html"><img class="logo" src="LOGO PNG 1.png" ></a>
-        
-        <div class="catalog"> 
-            
-        </div>
-    </div>
-    <ul>
-        
-        
-        <li><a class="active" href="Regjistrohu.html"><button class="favoritestyled" type="button" onclick="" >Regjistrohu</button></a></li>
-        <li class="navtext"><a href="Aboutus.html">About Us</a></li>
-        <li class="navtext"><a href="contact.html">Contact Us</a></li>
-        
-    </ul>
+    <header class="navigation-header">
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img src="LOGO PNG 1.png" alt=""></a>
+            </div>
+            <div class="navigation-items" id="navigation-items">
+                <a href="Login.html">Regjistrohu</a>
+                <a href="Aboutus.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="hamburger">
+                <span id="openHam">&#9776;</span>
+                <span id="closeHam">&#x2716;</span>
+            </div>
+        </nav>
+       </header>
 </header>
+
 <!-- ketu vendoset main body -->
 <main>
 
@@ -105,6 +108,21 @@
 <footer>
 
 </footer>
+
+<script>
+    let openHam = document.querySelector('#openHam');
+    let closeHam = document.querySelector('#closeHam');
+    let navigationItems = document.querySelector('#navigation-items');
+
+    const hamburgerEvent = (navigation, close, open) => {
+        navigationItems.style.display = navigation;
+        closeHam.style.display = close;
+        openHam.style.display = open;
+    };
+
+    openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
+    closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block"));
+</script>
 
 </body>
 </html>
