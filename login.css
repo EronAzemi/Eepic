@@ -12,6 +12,10 @@ main {
     background-color: #00BFFF;;
 }
 
+.login-result {
+    margin-top: 10px;
+    color: #333;
+}
 
 
 #create-account-form {

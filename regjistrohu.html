@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>,
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regjistrohu</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbarlog.css">
+    
+
+    
+</head>
+<body>
+
+    <header>
+        <header>
+            <header class="navigation-header">
+                <nav>
+                    <div class="logo-container">
+                        <a href="index.html"><img src="LOGO PNG 1.png" alt=""></a>
+                    </div>
+                    <div class="navigation-items" id="navigation-items">
+                        <a href="Login.html">Regjistrohu</a>
+                        <a href="Aboutus.html">About Us</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                    <div class="hamburger">
+                        <span id="openHam">&#9776;</span>
+                        <span id="closeHam">&#x2716;</span>
+                    </div>
+                </nav>
+               </header>
+        </header>
+    </header>
+    <main>
+
+      
+    <main>
+        <form id="create-account-form" action="regjistrohu.php" method="post">
+          <div class="title">
+            <h2>Regjistrohu</h2>
+        </div>
+        
+        <!-- Emri -->
+        <div class="input-group">
+            <label for="username">username</label>
+            <input type="text" id="username" placeholder="Name" name="username">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error Message</p>
+        </div>
+        <!-- EMAIL -->
+        <div class="input-group">
+            <label for="email">email</label>
+            <input type="email" id="email" placeholder="Email" name="email">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error Message</p>
+        </div>
+        <!-- PASSWORD -->
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" name="password">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error Message</p>
+        </div>
+        <!-- Konfirmo password -->
+        <div class="input-group">
+            <label for="confirm_password">Konfirmo Password</label>
+            <input type="password" id="confirm_password" placeholder="Password" name="confirm_password">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Error Message</p>
+        </div>
+            <button type="submit" class="btn">Regjistrohu</button>
+        </form>
+        <!-- Display registration result -->
+        <div id="resultMessage"></div>
+    </main>
+    
+      
+  </footer>
+    <script src="app.js"></script>
+    <script>
+      
+      let openHam = document.querySelector('#openHam');
+      let closeHam = document.querySelector('#closeHam');
+      let navigationItems = document.querySelector('#navigation-items');
+
+      const hamburgerEvent = (navigation, close, open) => {
+          navigationItems.style.display = navigation;
+          closeHam.style.display = close;
+          openHam.style.display = open;
+      };
+
+      openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
+      closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block"));
+    </script>
+
+    
+  
+   
+    
+</body>
+</html>
+
