@@ -13,7 +13,7 @@ $username = $_SESSION['username'];
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- your head content here -->
+   
 </head>
 <body>
     <h2>Welcome, User <?php echo $username; ?></h2>
