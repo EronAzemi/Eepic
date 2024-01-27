@@ -1,109 +1,65 @@
-.produkti{
-    display: flex;
-    padding: 40px;
-    height: 400px;
-    
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: stretch;
-	align-content: flex-start;
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00BFFF;
 }
 
-.foto{
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: white;
-    height: 400px;
-    width: 500px;
+.box {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.mySlides{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 30px;
+h2 {
+    color: #333;
 }
 
-.info{
-    display: flex;
-    flex-direction: row;
-    background-color: whitesmoke;
-    height: 400px;
-    width: 500px;
+p {
+    color: #666;
+    margin-bottom: 10px;
 }
 
-.informacion{
-    font-family: 'Courier New', Courier, monospace;
-    padding: 30px;
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
 }
 
-.button{
+.product {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    margin-top: 175px;
-    border: 0px;
-    color: white;
-    background-color: rgba(0, 191, 255, 1);
-    border-radius: 20px;
-    height: 50px;
-    width: 50px;
+}
+
+button{
+    width:50%;
+    padding:10px;
+    font-size: 20px;
+    background-color: #00BFFF;;
+    color:#fff;
+    text-transform: uppercase;
+    border:none;
+    border-radius: 25px;
 }
 
 
-
-.submit{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(0, 191, 255, 1);
-    width: 100px;
-    height: 30px;
-    border: none;
-    border-radius: 12px;
-}
-
-.shto{
-    color: gainsboro;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(59, 67, 70);
-    width: 100px;
-    height: 30px;
-    border: none;
-    border-radius: 12px;
-}
-
-.infoperprodukt{
-    margin: auto;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-content: center;
-        align-content: flex-end;
-        background-color: white;
-        width: 1200px;
-        
-}
-
-.fotografiaperprodukt{
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.titulliperprodukt{
-    font-family: 'Courier New', Courier, monospace;
-    padding: 20px;
-}
-
-.textiperprodukt{
-    font-family: 'Courier New', Courier, monospace;
-    padding-top: 50px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 10px;
+@media screen and (max-width: 500px) {
+    .box, .product {
+        max-width: 100%;
+        margin: 20px;
+    }
 }

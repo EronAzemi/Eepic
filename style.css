@@ -1,7 +1,8 @@
-body{
+body {
+    font-family: Arial, sans-serif;
     background-color: rgba(0, 191, 255, 1);
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -22,86 +23,9 @@ body{
     
 }
 
-.fotografit{
-    padding-top: 60px;
-    padding-bottom: 30px;
-    justify-content:center;
-    display: flex;
-    border: 10px white;
-    background-color: rgba(0, 191, 255, 1);
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
-    
-    
-}
-
-.box img {
-    padding-top: 20px;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .box1 img {
-    object-fit: cover;
-  }
-
-.rubrika{
-    
-    width: 300px;
-    height: 400px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 12px;
-    
-}
-
-.modeli button{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(0, 191, 255, 1);
-    width: 100px;
-    height: 30px;
-    border: none;
-    border-radius: 12px;
-}
-
-
-
-.modeli{
-    padding: 10px;
-}
 
 .footer{
     width: 100%;
     height: 300px;
     background-color: black;
-}
-.img5{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 5.png);
-}
-.img6{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 6.png);
-}
-.img7{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 4.png);
-}
-.img8{
-    border: 10px white;
-    width: 298px;
-    height: 298px;
-    background-image: url(Rectangle\ 5.png);
 }

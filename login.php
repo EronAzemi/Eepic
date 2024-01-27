@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['user_id'] = $user['user_id'];
+            $_SESSION['login_time'] = time();
 
             if ($user['user_id'] === 'admin') {
                 header("Location: admin_dashboard.php");

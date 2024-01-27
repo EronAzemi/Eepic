@@ -1,50 +1,63 @@
-const form = document.querySelector('#create-account-form');
+const registrationForm = document.querySelector('#create-account-form');
 const usernameInput = document.querySelector('#username');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const confirmPasswordInput = document.querySelector('#confirm-password');
-const resultMessage = document.querySelector('#resultMessage');
 
+registrationForm.addEventListener('submit', (event) => {
+    event.preventDefault(); 
 
-
-form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    validateForm();
-
-    if (isFormValid()) {
-        try {
-            const formData = new FormData(form);
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData,
-            });
-            const data = await response.json();
-
-            resultMessage.textContent = data.message;
-
-            if (data.status === 'success') {
-                // Redirect to another HTML page
-                window.location.href = 'Login.html';
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            resultMessage.textContent = 'An error occurred while processing the registration.';
-        }
+    if (validateRegistrationForm()) {
+        registrationForm.submit(); 
     }
 });
 
+function validateRegistrationForm() {
+    let isValid = true;
 
+    // Validate username
+    if (usernameInput.value.trim() === '') {
+        setError(usernameInput, 'Username cannot be empty');
+        isValid = false;
+    } else if (usernameInput.value.trim().length < 5 || usernameInput.value.trim().length > 15) {
+        setError(usernameInput, 'Username must be between 5 and 15 characters');
+        isValid = false;
+    } else {
+        setSuccess(usernameInput);
+    }
 
+    // Validate email
+    if (emailInput.value.trim() === '') {
+        setError(emailInput, 'Email cannot be empty');
+        isValid = false;
+    } else if (!isEmailValid(emailInput.value.trim())) {
+        setError(emailInput, 'Invalid email format');
+        isValid = false;
+    } else {
+        setSuccess(emailInput);
+    }
 
-function isFormValid() {
-    const inputContainers = form.querySelectorAll('.input-group');
-    let result = true;
-    inputContainers.forEach((container) => {
-        if (container.classList.contains('error')) {
-            result = false;
-        }
-    });
-    return result;
+    // Validate password
+    if (passwordInput.value.trim() === '') {
+        setError(passwordInput, 'Password cannot be empty');
+        isValid = false;
+    } else if (passwordInput.value.trim().length < 6 || passwordInput.value.trim().length > 20) {
+        setError(passwordInput, 'Password must be between 6 and 20 characters');
+        isValid = false;
+    } else {
+        setSuccess(passwordInput);
+    }
+
+   // konfirmo password
+    if (passwordInput.value.trim() == '') {
+        setError(passwordInput, 'Password cannot be empty');
+    } else if (passwordInput.value.trim().length < 6 || passwordInput.value.trim().length > 20) {
+        setError(passwordInput, 'Password must be between 6 and 20 characters');
+    } else {
+        setSuccess(passwordInput);
+    }
+
+    return isValid;
 }
 
 function setError(element, errorMessage) {
@@ -55,9 +68,6 @@ function setError(element, errorMessage) {
     parent.classList.add('error');
     const paragraph = parent.querySelector('p');
     paragraph.textContent = errorMessage;
-
-    
-    clearResultMessage();
 }
 
 function setSuccess(element) {
@@ -66,15 +76,9 @@ function setSuccess(element) {
         parent.classList.remove('error');
     }
     parent.classList.add('success');
-
-    
-    clearResultMessage();
 }
 
-function clearResultMessage() {
-    
-    resultMessage.textContent = '';
+function isEmailValid(email) {
+    const reg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    return reg.test(email);
 }
-
-
-

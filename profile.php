@@ -8,25 +8,24 @@ if (!isset($_SESSION['username'])) {
 }
 
 $username = $_SESSION['username'];
+$loginTime = isset($_SESSION['login_time']) ? $_SESSION['login_time'] : 'N/A';
+$email = isset($_SESSION['email']) ? $_SESSION['email'] : 'N/A';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eepic</title>
-    
-    <link rel="stylesheet" href="product.css">
-    <link rel="stylesheet" href="navbar.css">
-    
-    
+    <title>Profile</title>
+    <link rel="stylesheet" href="navbarlog.css">
+    <link rel="stylesheet" href="profile.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 <body>
-     <!-- ketu vendoset header    -->
-<header>
-    <header class="navigation-header">
+    
+   
+        <header class="navigation-header">
         <nav>
             <div class="logo-container">
                 <a href="welcome.php"><img src="Images/LOGO PNG 1.png" alt=""></a>
@@ -43,23 +42,17 @@ $username = $_SESSION['username'];
             </div>
         </nav>
        </header>
-</header>
-<div class="banerBG">
-        <img class="Baneri"src="Images/HomePage-YourFavoritePc 2.png" alt="">
+    
+    <div class="container">
+        <h2>Welcome, <?php echo $username; ?></h2>
+
+        <div class="profile-info">
+            <p><strong>Email:</strong> <?php echo $email; ?></p>
+            <p><strong>Last Login Time:</strong> <?php echo $loginTime; ?></p>
+        </div>
+
+        <a href="welcome.php" class="btn">Go back</a>
+        <a href="update_profile.php" class="btn2">Edit profile</a>
     </div>
-    <br>
-    <h2>Welcome, <?php echo $username; ?></h2>
-    
-    <div id="productList"></div>
-    
-    <script>
-        fetch('display_products.php')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('productList').innerHTML = data;
-            })
-            .catch(error => console.error('Error fetching products:', error));
-    </script>
-    <?php include 'footer.php'; ?>
 </body>
 </html>
