@@ -1,72 +1,74 @@
 *, body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  
-  /* Navigation */
-  .navigation-header {
-    background-color: white;
-    padding: 0 15px;
-    height: 100px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+.navigation-header {
+  background-color: white;
+  padding: 0 15px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-container > a {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+}
+.navigation-items {
+  display: flex;
+  gap: 40px;
+}
+.navigation-items > a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: .4s ease-in-out;
+}
+.navigation-items > a:hover {
+  color: black;
+}
+.hamburger {
+  display: none;
+  font-size: 20px;
+  font-weight: 800;
+  color: black;
+}
+@media screen and (max-width:768px) {
+  .hamburger {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
   }
-  
-  nav {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logo-container > a {
-    color: black;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 26px;
+  .hamburger #closeHam {
+    display: none;
   }
   .navigation-items {
-    display: flex;
-    gap: 40px;
-  }
-  .navigation-items > a {
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    transition: .4s ease-in-out;
-  }
-  .navigation-items > a:hover {
-    color: black;
-  }
-  .hamburger {
     display: none;
-    font-size: 20px;
-    font-weight: 800;
-    color: black;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 105px;
+    background-color: white;
+    width: 100%;
+    min-height: 60px;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 30px;
   }
-  @media screen and (max-width:768px) {
-    .hamburger {
-      display: flex;
-      cursor: pointer;
-    }
-    .hamburger #closeHam {
-      display: none;
-    }
-    .navigation-items {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      position: absolute;
-      right: 0;
-      top: 58px;
-      background-color: white;
-      width: 100%;
-      height: calc(100vh - 58px);
-      padding-top: 60px;
-      gap: 10vh;
-    }
-  }
+}

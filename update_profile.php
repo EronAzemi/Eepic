@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Profile</title>
-    <link rel="stylesheet" href="navbarlog.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="profile.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
@@ -99,5 +99,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p class="error-message"><?php echo $errorMessage; ?></p>
         <?php endif; ?>
     </div>
+    <script>
+        let openHam = document.querySelector('#openHam');
+    let closeHam = document.querySelector('#closeHam');
+    let navigationItems = document.querySelector('#navigation-items');
+
+    const hamburgerEvent = (navigation, close, open) => {
+        navigationItems.style.display = navigation;
+        closeHam.style.display = close;
+        openHam.style.display = open;
+    };
+
+    openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
+    closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block"));
+    </script>
 </body>
 </html>

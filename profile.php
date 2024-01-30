@@ -18,7 +18,7 @@ $email = isset($_SESSION['email']) ? $_SESSION['email'] : 'N/A';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="navbarlog.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="profile.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
@@ -54,5 +54,20 @@ $email = isset($_SESSION['email']) ? $_SESSION['email'] : 'N/A';
         <a href="welcome.php" class="btn">Go back</a>
         <a href="update_profile.php" class="btn2">Edit profile</a>
     </div>
+    <script>
+        let openHam = document.querySelector('#openHam');
+    let closeHam = document.querySelector('#closeHam');
+    let navigationItems = document.querySelector('#navigation-items');
+
+    const hamburgerEvent = (navigation, close, open) => {
+        navigationItems.style.display = navigation;
+        closeHam.style.display = close;
+        openHam.style.display = open;
+    };
+
+    openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
+    closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block"));
+    </script>
+   
 </body>
 </html>

@@ -33,19 +33,21 @@ if (isset($_GET['product_id'])) {
             <title><?php echo $product['name']; ?></title>
             <link rel="stylesheet" href="kompjuteri.css">
             <link rel="stylesheet" href="navbar.css">
+            
+            
             <link rel="icon" type="image/x-icon" href="favicon.png">
         </head>
         <body>
-        <header class="navigation-header">
+        <header>
+    <header class="navigation-header">
         <nav>
             <div class="logo-container">
-                <a href="welcome.php"><img src="Images/LOGO PNG 1.png" alt=""></a>
+                <a href="index.html"><img src="Images/LOGO PNG 1.png" alt=""></a>
             </div>
             <div class="navigation-items" id="navigation-items">
-                <a href="logout.php">Logout</a>
-                <a href="profile.php">Profili</a>
-                
-                
+                <a href="regjistrohu.html">Regjistrohu</a>
+                <a href="Aboutus.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
             </div>
             <div class="hamburger">
                 <span id="openHam">&#9776;</span>
@@ -53,6 +55,8 @@ if (isset($_GET['product_id'])) {
             </div>
         </nav>
        </header>
+</header>
+
             <div class="box">
             <img src="<?php echo $product['image_path']; ?>" alt="Product Image" style="max-width: 100%; height: auto;">
                 <h2><?php echo $product['name']; ?></h2>
@@ -63,11 +67,24 @@ if (isset($_GET['product_id'])) {
                 <input type="hidden" name="product_id" value="1"> 
             <button type="submit">Buy Now</button>
             </div>
+          
             
             
-            
+        <script>
+                let openHam = document.querySelector('#openHam');
+            let closeHam = document.querySelector('#closeHam');
+            let navigationItems = document.querySelector('#navigation-items');
 
-            
+            const hamburgerEvent = (navigation, close, open) => {
+                navigationItems.style.display = navigation;
+                closeHam.style.display = close;
+                openHam.style.display = open;
+            };
+
+            openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
+            closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block"));
+        </script>
+
         </body>
         </html>
         <?php
