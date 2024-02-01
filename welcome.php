@@ -6,7 +6,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.html");
     exit();
 }
-
+header('Content-Type: text/html; charset=utf-8');
 $username = $_SESSION['username'];
 ?>
 
@@ -19,6 +19,7 @@ $username = $_SESSION['username'];
     
     <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="navbarlog.css">
     
     
     <link rel="icon" type="image/x-icon" href="favicon.png">
@@ -44,8 +45,10 @@ $username = $_SESSION['username'];
         </nav>
        </header>
 </header>
-<div class="banerBG">
+    <div class="main">
+        <div class="banerBG">
         <img class="Baneri"src="Images/HomePage-YourFavoritePc 2.png" alt="">
+    </div>
     </div>
     <br>
     <h2>Welcome, <?php echo $username; ?></h2>
@@ -53,12 +56,25 @@ $username = $_SESSION['username'];
     <div id="productList"></div>
     
     <script>
-        fetch('display_products.php')
+         fetch('display_products.php')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('productList').innerHTML = data;
             })
             .catch(error => console.error('Error fetching products:', error));
+            
+    let openHam = document.querySelector('#openHam');
+    let closeHam = document.querySelector('#closeHam');
+    let navigationItems = document.querySelector('#navigation-items');
+
+    const hamburgerEvent = (navigation, close, open) => {
+        navigationItems.style.display = navigation;
+        closeHam.style.display = close;
+        openHam.style.display = open;
+    };
+
+    openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
+    closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block"));
     </script>
     <?php include 'footer.php'; ?>
 </body>

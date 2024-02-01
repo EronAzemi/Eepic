@@ -29,3 +29,18 @@ body {
     height: 300px;
     background-color: black;
 }
+
+button {
+    
+    
+    bottom: 20px; 
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 13px;
+    background-color: #00BFFF;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}

@@ -18,17 +18,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = mysqli_real_escape_string($connection, $_POST['password']);
     $confirm_password = mysqli_real_escape_string($connection, $_POST['confirm_password']);
 
-    // Validate required fields
+    
     if (empty($username) || empty($email) || empty($password) || empty($confirm_password)) {
         $response['status'] = 'error';
         $response['message'] = 'All fields are required.';
     } else {
-        // Validate email format
+        
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $response['status'] = 'error';
             $response['message'] = 'Invalid email format.';
         } else {
-            // Validate password match
+            
             if ($password !== $confirm_password) {
                 $response['status'] = 'error';
                 $response['message'] = 'Passwords do not match.';
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Content-Type: application/json');
     echo json_encode($response);
     
-    // Redirect if registration is successful
+
     if ($response['status'] === 'success') {
         header('Location: login.html');
         exit();

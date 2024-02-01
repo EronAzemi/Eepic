@@ -5,7 +5,7 @@
     font-family: sans-serif;
   }
   
-  /* Navigation */
+
   .navigation-header {
     background-color: white;
     padding: 0 15px;
@@ -62,11 +62,13 @@
       align-items: center;
       position: absolute;
       right: 0;
-      top: 58px;
+      top: 105px;
       background-color: white;
       width: 100%;
-      height: calc(100vh - 58px);
-      padding-top: 60px;
-      gap: 10vh;
+      min-height: 60px;
+      height: auto;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      gap: 30px;
     }
   }

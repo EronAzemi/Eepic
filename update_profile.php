@@ -9,15 +9,15 @@ if (!isset($_SESSION['username'])) {
 $errorMessage = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Handle form submission
+    
     $newUsername = isset($_POST['new_username']) ? trim($_POST['new_username']) : '';
     $newPassword = isset($_POST['new_password']) ? trim($_POST['new_password']) : '';
 
-    // Validate and update user information in the database
+ 
     if (!empty($newUsername) && !empty($newPassword)) {
-        // You should add additional validation and security measures here
         
-        // Update user information in the database (replace this with your database logic)
+        
+     
         $host = 'localhost';
         $dbUsername = 'root';
         $dbPassword = '';
@@ -29,16 +29,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($connection) {
             $username = $_SESSION['username'];
 
-            // Update username
             $updateUsernameQuery = "UPDATE users SET username = '$newUsername' WHERE username = '$username'";
             mysqli_query($connection, $updateUsernameQuery);
 
-            // Update password (make sure to hash the new password)
+           
             $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
             $updatePasswordQuery = "UPDATE users SET password = '$hashedPassword' WHERE username = '$username'";
             mysqli_query($connection, $updatePasswordQuery);
 
-            $_SESSION['username'] = $newUsername; // Update session username
+            $_SESSION['username'] = $newUsername; 
 
             mysqli_close($connection);
 
@@ -59,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Profile</title>
-    <link rel="stylesheet" href="navbarlog.css">
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="profile.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
@@ -99,5 +98,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p class="error-message"><?php echo $errorMessage; ?></p>
         <?php endif; ?>
     </div>
+    <script>
+        let openHam = document.querySelector('#openHam');
+    let closeHam = document.querySelector('#closeHam');
+    let navigationItems = document.querySelector('#navigation-items');
+
+    const hamburgerEvent = (navigation, close, open) => {
+        navigationItems.style.display = navigation;
+        closeHam.style.display = close;
+        openHam.style.display = open;
+    };
+
+    openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
+    closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block"));
+    </script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 <?php
-// display_products.php
 
 $host = 'localhost';
 $username = 'root';
@@ -12,7 +11,7 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Fetch and display product list
+
 $query = "SELECT * FROM products";
 $result = mysqli_query($connection, $query);
 
